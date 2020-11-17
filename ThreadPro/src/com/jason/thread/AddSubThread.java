@@ -75,5 +75,6 @@ public class AddSubThread {
 		new Thread(at,"加法线程 - B").start();
 		new Thread(st,"减法线程 - X").start();
 		new Thread(st,"减法线程 - Y").start();
+		System.out.println("测试");
 	}
 }
