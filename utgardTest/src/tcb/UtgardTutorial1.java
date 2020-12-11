@@ -18,10 +18,15 @@ public class UtgardTutorial1 {
     public static void main(String[] args) throws Exception {
         // 连接信息
         final ConnectionInformation ci = new ConnectionInformation(); 
-        ci.setHost("192.168.6.227");         // 电脑IP
+//        ci.setHost("192.168.6.227");         // 电脑IP
+//        ci.setDomain("");                  // 域，为空就行
+//        ci.setUser("OPCUser");             // 电脑上自己建好的用户名
+//        ci.setPassword("123456");          // 用户名的密码
+        
+        ci.setHost("10.0.37.60");         // 电脑IP
         ci.setDomain("");                  // 域，为空就行
-        ci.setUser("OPCUser");             // 电脑上自己建好的用户名
-        ci.setPassword("123456");          // 用户名的密码
+        ci.setUser("DB1");             // 电脑上自己建好的用户名
+        ci.setPassword("Admin123456");          // 用户名的密码
  
         // 使用MatrikonOPC Server的配置
         // ci.setClsid("F8582CF2-88FB-11D0-B850-00C0F0104305"); // MatrikonOPC的注册表ID，可以在“组件服务”里看到
@@ -31,7 +36,8 @@ public class UtgardTutorial1 {
         ci.setClsid("7BC0CC8E-482C-47CA-ABDC-0FE7F9C6E729");
 //        ci.setClsid("7BC0CC8E-482C-47CA-ABDC-0FE7F9C6E729"); // KEPServer的注册表ID，可以在“组件服务”里看到
 //        final String itemId = "u.u.u";    // 项的名字按实际，没有实际PLC，用的模拟器：simulator
-         final String itemId = "通道 2.设备 1.TAG5";
+//         final String itemId = "通道 2.设备 1.TAG5";
+        final String itemId = "Server.AI.AI.JDH1:LA:2";
  
         // 启动服务
         final Server server = new Server(ci, Executors.newSingleThreadScheduledExecutor());
