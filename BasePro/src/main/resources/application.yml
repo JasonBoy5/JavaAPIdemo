@@ -1,0 +1,33 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /api
+spring:
+  profiles:
+    active: dev
+
+
+#pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+  returnPageInfo: check
+
+#logging
+logging:
+  level:
+    com.secom.institution: info
+  config: classpath:logging-config.xml
+  file:
+    path: log
+
+
+general:
+  noFilterUrlSet:
+    - /user/login
+    - /swagger-resources
+    - /webjars/springfox-swagger-ui
+    - /v2/api-docs
+    - /swagger-ui.html
